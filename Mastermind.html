@@ -6,7 +6,15 @@
 </head>
 <body>
 <main>
-<section id="mainbody">
+<nav class="dropdown"> 
+	<button class="dropbtn"> Menu</button>
+	 <div class="dropdown-content">
+		<button id="button1" onclick="generateCode()">Start</button>
+		<button id="button2" onclick="reset()">New game</button>
+	</div>
+</nav>
+
+		<section id="mainbody">
 	<section id="flex">
 		<section id ="ms1">	
 		</section>
@@ -137,7 +145,7 @@
 			<section id="ch4"></section>
 		</section>
 		</section>
-<section id="player">
+			<section id="player">
 	<section onclick="userinput(0)" id="player1"></section>
 	<section onclick="userinput(1)" id="player2"></section>
 	<section onclick="userinput(2)" id="player3"></section>
@@ -147,15 +155,10 @@
 	<section onclick="userinput(6)" id="player7"></section>
 	<section onclick="userinput(7)" id="player8"></section>
 	<section onclick="checkrow()" id="check"></section>
-	</section>
-</section>
+	</section></section>
+		</section>
 
-
-
-	<button id="button1" onclick="generateCode()">Start</button>
-	<button id="button2" onclick="reset()">New game</button>
-
-	<script src="Mastermind.js"></script>
+		<script src="Mastermind.js"></script>
 </main>
 	
 

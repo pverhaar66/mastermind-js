@@ -5,32 +5,23 @@ body {
 }
 
 button {
+	background: lightblue;
 	height: 80px;
 	width: 150px;
-	background-color: blue;
-	color: white;
 	font-weight: bolder;
 	font-size: 20px;
 }
 
 button:hover {
-	background-color: lightseagreen;
-	color: white;
+	background-color: aliceblue;
 }
 
-#button1 {
+nav {
 	position: absolute;
-	left: 20px;
-	top: 10px;
-}
-
-#button2 {
-	position: absolute;
-	left: 20px;
-	top: 100px;
 }
 
 #mainbody {
+	z-index: 2;
 	height: 900px;
 	width: 600px;
 	background-color: darkslateblue ;
@@ -58,6 +49,7 @@ button:hover {
 }
 
 #flex {
+	z-index: 2;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
@@ -126,4 +118,60 @@ button:hover {
 	border-radius: 50%;
 	background-color: white;
 	margin: 4 auto;	
+}
+
+
+===============================
+
+.dropbtn {
+    background-color: blue;
+    color: white;
+    height: 60px;
+    width: 120px;
+    font-size: 16px;
+    border: solid black 2px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    left: 1	0px;
+    top: 10px;
+}
+
+
+.dropdown-content {
+    color: white;
+    display: none;
+    position: absolute;
+	width: 100%;
+	height: 100%;
+	
+}
+
+
+.dropdown-content a {
+	background-color: black;
+    color: white;
+    padding: 15px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+	background-color: aliceblue;
+
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+    background-color: aliceblue;
+    color: black;
 }
