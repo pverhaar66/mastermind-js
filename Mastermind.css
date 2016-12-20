@@ -1,0 +1,124 @@
+body {
+	background-image: url('img/circuit.jpeg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+button {
+	height: 80px;
+	width: 150px;
+	background-color: blue;
+	color: white;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+button:hover {
+	background-color: lightseagreen;
+	color: white;
+}
+
+#button1 {
+	position: absolute;
+	left: 20px;
+	top: 10px;
+}
+
+#button2 {
+	position: absolute;
+	left: 20px;
+	top: 100px;
+}
+
+#mainbody {
+	height: 900px;
+	width: 600px;
+	background-color: darkslateblue ;
+	margin: 0 auto;
+}
+
+#checker {
+	padding-right: 10px;
+	height: 20px;
+	width: 20px;
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+
+#ch1, #ch2, #ch3, #ch4 {
+	border: solid black 2px;
+	height: 6px;
+	width: 6px;
+	border-radius: 50%;
+	background-color: white;
+	margin: 1 auto ;
+}
+
+#flex {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	height: 80px;
+	width: 450px;
+	background-color: aliceblue;
+
+}
+
+#ms1, #ms2, #ms3, #ms4 {
+	border: solid black 2px;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background-color: white;
+	margin: 6 auto;
+}
+
+#player {
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	height: 60px;
+	width: 500px;
+	flex-wrap: wrap;
+	background-color: aliceblue;
+}
+
+#check{
+	border: solid black 1px;
+	background-color: aliceblue;
+	font-size: 20px;
+	height: 50px;
+	width:50px;
+	bottom: 0px;
+	right: 0px;
+}
+
+#player1, #player2, #player3, #player4, #player5, #player6, #player7, #player8 {
+	border: solid black 2px;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	margin: 7 auto;
+}
+
+#try1, #try2, #try3, #try4, #try5, #try6, #try7, #try8, #try9, #try10 {
+	margin: 30 auto;
+	height: 40px;
+	width: 400px;
+	background-color: aliceblue;
+	display: flex;
+	flex-direction: row;
+}
+
+#ps1, #ps2, #ps3, #ps4 {
+	border: solid black 2px;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: white;
+	margin: 4 auto;	
+}
