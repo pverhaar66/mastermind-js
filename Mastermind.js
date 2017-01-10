@@ -1,20 +1,7 @@
 var master = [];
 var player = [ null, null, null, null];
 var hex = ["red", "blue", "green", "orange", "pink", "darkblue", "grey", "black"];
-var ifnput = [[], [], [], [], [], [], [], [], [], []];
-var row = [row1, row2, row3, row4, row5, row6, row7, row8, row9, row10];
-
-var row1 = document.getElementById('try1');
-var row2 = document.getElementById('try2');
-var row3 = document.getElementById('try3');
-var row4 = document.getElementById('try4');
-var row5 = document.getElementById('try5');
-var row6 = document.getElementById('try6');
-var row7 = document.getElementById('try7');
-var row8 = document.getElementById('try8');
-var row9 = document.getElementById('try9');
-var row10 = document.getElementById('try10');
-
+var row = 1;
 
 var ms1 = document.getElementById('ms1'); 
 var ms2 = document.getElementById('ms2');
@@ -29,6 +16,11 @@ var pink = document.getElementById('player5');
 var darkblue = document.getElementById('player6');
 var grey = document.getElementById('player7');
 var black = document.getElementById('player8');
+
+var ch1 = document.getElementById('ch1_'+ row);
+var ch2 = document.getElementById('ch2_'+ row);
+var ch3 = document.getElementById('ch3_'+ row);
+var ch4 = document.getElementById('ch4_'+ row);
 
 
 (function(){
@@ -46,7 +38,14 @@ function reset(){
 	console.log("reset");
 	master = [];
 	player = [null, null, null, null];
-	var input = [[],[],[],[],[],[],[],[],[],[]];
+	row = 1;
+	ch1.style.backgroundColor = 'none';
+	ch2.style.backgroundColor = 'none';
+	ch3.style.backgroundColor = 'none';
+	ch4.style.backgroundColor = 'none';
+
+
+
 	generateCode()
 }
 
@@ -76,41 +75,38 @@ function colour() {
 }
 
 
-
 function userinput(number) {
-		
 
-	var ps1 = document.getElementById('ps1')
-	var ps2 = document.getElementById('ps2')
-	var ps3 = document.getElementById('ps3')
-	var ps4 = document.getElementById('ps4')
+
+	var ps1 = document.getElementById('ps1_'+ row);
+	var ps2 = document.getElementById('ps2_'+ row);
+	var ps3 = document.getElementById('ps3_'+ row);
+	var ps4 = document.getElementById('ps4_'+ row);
 
 
 	if (player[0] == null){
-		player[0] = number;
-		player.push(hex[number]);
+		player[0] = (hex[number]);
+		
 
 	} else if (player[1] == null) { 
-			  	player[1] = number;
-			  	player.push(hex[number]);
+			  	player[1] = (hex[number]);
+	
 	} else if (player[2] == null) {
-				player[2] = number;
-				player.push(hex[number]);
+				player[2] = (hex[number]);
+				
 	} else if (player[3] == null) {
-				player[3] = number;
-				player.push(hex[number]);
+				player[3] = (hex[number]);
+				
 	}
 	
 
-	console.log(player);
-
-	ps1.style.backgroundColor = player[4];
-	ps2.style.backgroundColor = player[5];
-	ps3.style.backgroundColor = player[6];
-	ps4.style.backgroundColor = player[7];
+	console.log(player);	
 
 
-
+	ps1.style.backgroundColor = player[0];
+	ps2.style.backgroundColor = player[1];
+	ps3.style.backgroundColor = player[2];
+	ps4.style.backgroundColor = player[3];
 
 }
 
@@ -118,37 +114,33 @@ function userinput(number) {
 function checkrow(index) {
 
 
-	var ch1 = document.getElementById('ch1');
-	var ch2 = document.getElementById('ch2');
-	var ch3 = document.getElementById('ch3');
-	var ch4 = document.getElementById('ch4');
-
 
 if(player[0] == null){
 	alert('Error 404 colour not found');
-	console.log('SmartAI : the player is being stupid');
-}else if (player[4] == master[0]) {
+	console.log('Mastermind : the player is being stupid');
+
+
+}else if (player[0] == master[0]) {
 		ch1.style.backgroundColor = 'red';
+	}
 				
-	if (player[5] == master[1]){
+	if (player[1] == master[1]){
 		ch2.style.backgroundColor = 'red';
 	}
-	if (player[6] == master[2]){
+	if (player[2] == master[2]){
 		ch3.style.backgroundColor = 'red';
-		}
+	}
 
-	if (player[7] == master[3]){
+	if (player[3] == master[3]){
 		ch4.style.backgroundColor = 'red';
 	}
 
-
-	}
-}
-
-function changerow(){
-
-	
-
+	player[0] = null;
+	player[1] = null;
+	player[2] = null;
+	player[3] = null;
+	row = row+1;
 
 }
+
 
