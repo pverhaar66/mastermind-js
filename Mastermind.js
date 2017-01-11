@@ -17,11 +17,6 @@ var darkblue = document.getElementById('player6');
 var grey = document.getElementById('player7');
 var black = document.getElementById('player8');
 
-var ch1 = document.getElementById('ch1_'+ row);
-var ch2 = document.getElementById('ch2_'+ row);
-var ch3 = document.getElementById('ch3_'+ row);
-var ch4 = document.getElementById('ch4_'+ row);
-
 
 (function(){
 	red.style.backgroundColor = hex[0];
@@ -39,10 +34,10 @@ function reset(){
 	master = [];
 	player = [null, null, null, null];
 	row = 1;
-	ch1.style.backgroundColor = 'none';
-	ch2.style.backgroundColor = 'none';
-	ch3.style.backgroundColor = 'none';
-	ch4.style.backgroundColor = 'none';
+	ch1.style.backgroundColor = 'white';
+	ch2.style.backgroundColor = 'white';
+	ch3.style.backgroundColor = 'white';
+	ch4.style.backgroundColor = 'white';
 
 
 
@@ -113,11 +108,16 @@ function userinput(number) {
 
 function checkrow(index) {
 
-
+var ch1 = document.getElementById('ch1_'+ row);
+var ch2 = document.getElementById('ch2_'+ row);
+var ch3 = document.getElementById('ch3_'+ row);
+var ch4 = document.getElementById('ch4_'+ row);
 
 if(player[0] == null){
 	alert('Error 404 colour not found');
 	console.log('Mastermind : the player is being stupid');
+
+
 
 
 }else if (player[0] == master[0]) {
@@ -135,6 +135,10 @@ if(player[0] == null){
 		ch4.style.backgroundColor = 'red';
 	}
 
+	if(player[0] == master[0] && player[1] == master[1] && player[2] == master[2] && player[3] == master[3]){
+		alert('mastermind you got me there u win');
+	}
+
 	player[0] = null;
 	player[1] = null;
 	player[2] = null;
@@ -142,5 +146,3 @@ if(player[0] == null){
 	row = row+1;
 
 }
-
-
