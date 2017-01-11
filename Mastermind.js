@@ -3,6 +3,13 @@ var player = [ null, null, null, null];
 var hex = ["red", "blue", "green", "orange", "pink", "darkblue", "grey", "black"];
 var row = 1;
 
+var infoscrn = document.getElementById('infoscreen')
+var winner = document.getElementById('win')
+infoscrn.style.display = 'none';
+infoscrn.value = 0
+winner.style.display = 'none'
+
+
 var ms1 = document.getElementById('ms1'); 
 var ms2 = document.getElementById('ms2');
 var ms3 = document.getElementById('ms3');
@@ -17,6 +24,23 @@ var darkblue = document.getElementById('player6');
 var grey = document.getElementById('player7');
 var black = document.getElementById('player8');
 
+function createwin(){
+	winner.style.display = 'block';
+}
+
+
+function info(){
+	
+	if (infoscrn.value == 0) {
+		infoscrn.style.display = 'block';
+		infoscrn.value = 1;
+	}else{
+		infoscrn.style.display = 'none';
+		infoscrn.value = 0;
+	}
+
+
+}
 
 (function(){
 	red.style.backgroundColor = hex[0];
@@ -31,17 +55,7 @@ var black = document.getElementById('player8');
 
 function reset(){
 	console.log("reset");
-	master = [];
-	player = [null, null, null, null];
-	row = 1;
-	ch1.style.backgroundColor = 'white';
-	ch2.style.backgroundColor = 'white';
-	ch3.style.backgroundColor = 'white';
-	ch4.style.backgroundColor = 'white';
-
-
-
-	generateCode()
+	location.reload();
 }
 
 function generateCode(length, colors) {
@@ -136,13 +150,13 @@ if(player[0] == null){
 	}
 
 	if(player[0] == master[0] && player[1] == master[1] && player[2] == master[2] && player[3] == master[3]){
-		alert('mastermind you got me there u win');
-	}
-
-	player[0] = null;
-	player[1] = null;
-	player[2] = null;
-	player[3] = null;
-	row = row+1;
+		createwin();
+		}
+	
+player[0] = null;
+player[1] = null;
+player[2] = null;
+player[3] = null;
+row = row+1;
 
 }
