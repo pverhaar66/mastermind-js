@@ -4,10 +4,11 @@ var hex = ["red", "blue", "green", "orange", "pink", "darkblue", "grey", "black"
 var row = 1;
 
 var infoscrn = document.getElementById('infoscreen')
-var winner = document.getElementById('win')
 infoscrn.style.display = 'none';
-infoscrn.value = 0
-winner.style.display = 'none'
+infoscrn.value = 0;
+
+var winner = document.getElementById('win')
+winner.style.display = 'none';
 
 
 var ms1 = document.getElementById('ms1'); 
@@ -38,8 +39,6 @@ function info(){
 		infoscrn.style.display = 'none';
 		infoscrn.value = 0;
 	}
-
-
 }
 
 (function(){
@@ -50,7 +49,7 @@ function info(){
 	pink.style.backgroundColor = hex[4];
 	darkblue.style.backgroundColor = hex[5];
 	grey.style.backgroundColor = hex[6];
-	black.style.backgroundColor = hex[7];	 
+	black.style.backgroundColor = hex[7];
 })()
 
 function reset(){
@@ -58,17 +57,27 @@ function reset(){
 	location.reload();
 }
 
-function generateCode(length, colors) {
-	var length = length || 4;
-	var colors = colors || 6;
+function totalLength(){
+	var length = prompt("Please enter with how much colours you like te mastermind to use (select any number between 4 & 8)", "6");
 
+	generateCode(length, 6)
+}
+
+
+function generateCode(length) {
+	var length = length || 4;
+	var colours = colours || 6;
 	if (length > 8) {
-		length = 4;
+		length = 8;
+	}else if (length < 4) {
+		length = 4
 	}
+
 	for (var i=1; i<=length; i++) {
-		var digit = Math.floor((Math.random() * colors) + 1); 
+		var digit = Math.floor((Math.random() * colours) + 1); 
 		master.push(hex[digit]);
 	}
+
 	console.log(master);
 
 	colour();
