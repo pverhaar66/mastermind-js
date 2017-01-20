@@ -42,6 +42,18 @@ nav {
 
 }
 
+#setting {
+	height: 200px;
+	width: 800px;
+	top: 350px;
+	left: 540px;
+	text-align: center;
+	font-size: 22px;
+	background-color: aliceblue;
+	border: black solid 2px;
+	position: absolute;
+}
+
 #infoscreen {
 	height: 500px;
 	width: 1100px;
@@ -73,12 +85,14 @@ nav {
 #ch1_7, #ch2_7, #ch3_7, #ch4_7,
 #ch1_8, #ch2_8, #ch3_8, #ch4_8,
 #ch1_9, #ch2_9, #ch3_9, #ch4_9,
-#ch1_10, #ch2_10, #ch3_10, #ch4_10 {
+#ch1_10, #ch2_10, #ch3_10, #ch4_10,
+#ch1_11, #ch2_11, #ch3_11, #ch4_11,
+#ch1_12, #ch2_12, #ch3_12, #ch4_12 {
 	border: solid black 2px;
 	height: 6px;
 	width: 6px;
 	border-radius: 50%;
-	background-color: white;
+	background-color: purple;
 	margin: 1 auto ;
 }
 
@@ -136,8 +150,8 @@ nav {
 	margin: 7 auto;
 }
 
-#try1, #try2, #try3, #try4, #try5, #try6, #try7, #try8, #try9, #try10 {
-	margin: 30 auto;
+#try1, #try2, #try3, #try4, #try5, #try6, #try7, #try8, #try9, #try10,#try11, #try12 {
+	margin: 20 auto;
 	height: 40px;
 	width: 400px;
 	background-color: aliceblue;
@@ -145,7 +159,18 @@ nav {
 	flex-direction: row;
 }
 
-#ps1_1, #ps2_1, #ps3_1, #ps4_1,#ps1_2, #ps2_2, #ps3_2, #ps4_2, #ps1_3, #ps2_3, #ps3_3, #ps4_3, #ps1_4, #ps2_4, #ps3_4, #ps4_4, #ps1_5, #ps2_5, #ps3_5, #ps4_5, #ps1_6, #ps2_6, #ps3_6, #ps4_6, #ps1_7, #ps2_7, #ps3_7, #ps4_7, #ps1_8, #ps2_8, #ps3_8, #ps4_8, #ps1_9, #ps2_9, #ps3_9, #ps4_9, #ps1_10, #ps2_10, #ps3_10, #ps4_10 {
+#ps1_1, #ps2_1, #ps3_1, #ps4_1,
+#ps1_2, #ps2_2, #ps3_2, #ps4_2,
+#ps1_3, #ps2_3, #ps3_3, #ps4_3,
+#ps1_4, #ps2_4, #ps3_4, #ps4_4,
+#ps1_5, #ps2_5, #ps3_5, #ps4_5,
+#ps1_6, #ps2_6, #ps3_6, #ps4_6,
+#ps1_7, #ps2_7, #ps3_7, #ps4_7,
+#ps1_8, #ps2_8, #ps3_8, #ps4_8,
+#ps1_9, #ps2_9, #ps3_9, #ps4_9,
+#ps1_10, #ps2_10, #ps3_10, #ps4_10,
+#ps1_11, #ps2_11, #ps3_11, #ps4_11, 
+#ps1_12, #ps2_12, #ps3_12, #ps4_12{
 	border: solid black 2px;
 	height: 30px;
 	width: 30px;

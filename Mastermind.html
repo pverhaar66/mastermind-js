@@ -7,11 +7,12 @@
 <body>
 <main>
 <nav class="dropdown"> 
-	<button class="dropbtn"> Menu</button>
+	<button class="dropbtn">Menu</button>
 	 <div class="dropdown-content">
-		<button id="button1" onclick="totalLength()">Start</button>
+		<button id="button1" onclick="generateCode()">Start</button>
 		<button id="button2" onclick="reset()">New Game</button>
 		<button id="info" onclick="info()" >Info</button>
+		<button id="settings" onclick="sttn()">settings</button>
 	</div>
 </nav>
 
@@ -23,7 +24,12 @@
 <p>	you have guessed the code, well done </p>
 	
 </section>
-<section id='infoscreen'>
+<section id="setting">
+<p>select the amount of colours u like the mastermind to use (select a number between 6 & 8) <input type="number" id="wished">6</p>
+<button onclick="sttn()"> ok </button>	
+</section>
+
+<section id="infoscreen">
 	<h1>INFO</h1>
 	<p>Mastermind is a classic in games that require logical thinking. One player tries to solve the code the other player(the Mastermind) has setup.</p>
 
@@ -47,6 +53,30 @@
 		<section id ="ms4">
 		</section>	 
 	</section>
+		<section id="try12">
+		<section id="ps1_12"></section>
+		<section id="ps2_12"></section>
+		<section id="ps3_12"></section>
+		<section id="ps4_12"></section>
+		<section id="checker">
+			<section id="ch1_12"></section>
+			<section id="ch2_12"></section>
+			<section id="ch3_12"></section>
+			<section id="ch4_12"></section>
+		</section>
+		</section>
+		<section id="try11">
+		<section id="ps1_11"></section>
+		<section id="ps2_11"></section>
+		<section id="ps3_11"></section>
+		<section id="ps4_11"></section>
+		<section id="checker">
+			<section id="ch1_11"></section>
+			<section id="ch2_11"></section>
+			<section id="ch3_11"></section>
+			<section id="ch4_11"></section>
+		</section>
+		</section>
 		<section id="try10">
 		<section id="ps1_10"></section>
 		<section id="ps2_10"></section>

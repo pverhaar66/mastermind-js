@@ -3,12 +3,19 @@ var player = [ null, null, null, null];
 var hex = ["red", "blue", "green", "orange", "pink", "darkblue", "grey", "black"];
 var row = 1;
 
+var wished = document.getElementById('wished').value;
+wished.value = 6;
+
 var infoscrn = document.getElementById('infoscreen')
 infoscrn.style.display = 'none';
 infoscrn.value = 0;
 
 var winner = document.getElementById('win')
 winner.style.display = 'none';
+
+var settings = document.getElementById('setting')
+settings.style.display = 'none'; 
+settings.value = 0;
 
 
 var ms1 = document.getElementById('ms1'); 
@@ -29,6 +36,20 @@ function createwin(){
 	winner.style.display = 'block';
 }
 
+function sttn(){
+	
+	
+	if (settings.value == 0) {
+		settings.style.display = 'block';
+		settings.value = 1;
+	}else{
+		console.log('saved');
+		settings.value = 0;
+		settings.style.display = 'none';
+	}
+	return wished;
+}
+var wished;
 
 function info(){
 	
@@ -57,18 +78,12 @@ function reset(){
 	location.reload();
 }
 
-function totalLength(){
-	var length = prompt("Please enter with how much colours you like te mastermind to use (select any number between 4 & 8)", "6");
 
-	generateCode(length, 6)
-}
-
-
-function generateCode(length) {
+function generateCode(length, colours) {
 	var length = length || 4;
 	var colours = colours || 6;
-	if (length > 8) {
-		length = 8;
+	if (length > 4) {
+		length = 4;
 	}else if (length < 4) {
 		length = 4
 	}
@@ -89,13 +104,12 @@ function colour() {
 	ms2.style.backgroundColor = master[1];
 	ms3.style.backgroundColor = master[2];
 	ms4.style.backgroundColor = master[3];
+	
 	console.log("colouring done")
 }
 
 
 function userinput(number) {
-
-
 	var ps1 = document.getElementById('ps1_'+ row);
 	var ps2 = document.getElementById('ps2_'+ row);
 	var ps3 = document.getElementById('ps3_'+ row);
@@ -140,23 +154,65 @@ if(player[0] == null){
 	alert('Error 404 colour not found');
 	console.log('Mastermind : the player is being stupid');
 
-
-
-
 }else if (player[0] == master[0]) {
 		ch1.style.backgroundColor = 'red';
+	}else if (player[0] != master[0]) {
+
+		if (player[0] == master[1]) {
+			ch2.style.backgroundColor = 'white';
+		if (player[0] == master[2]) {
+			ch3.style.backgroundColor = 'white';
+		if (player[0] == master[3]) {
+			ch4.style.backgroundColor = 'white';
+		}
+		}
 	}
-				
+}
+
 	if (player[1] == master[1]){
 		ch2.style.backgroundColor = 'red';
-	}
+	}else if (player[1] != master[1]) {
+
+		if (player[1] == master[0]) {
+			ch1.style.backgroundColor = 'white';
+		if (player[1] == master[2]) {
+			ch3.style.backgroundColor = 'white';
+		if (player[1] == master[3]) {
+			ch4.style.backgroundColor = 'white';
+		}
+		}
+	}	
+}
+
 	if (player[2] == master[2]){
 		ch3.style.backgroundColor = 'red';
-	}
+	}else if (player[2] != master[2]) {
+
+		if (player[2] == master[0]) {
+			ch1.style.backgroundColor = 'white';
+		if (player[2] == master[1]) {
+			ch2.style.backgroundColor = 'white';
+		if (player[2] == master[3]) {
+			ch4.style.backgroundColor = 'white';
+		}
+		}
+	}	
+}
 
 	if (player[3] == master[3]){
 		ch4.style.backgroundColor = 'red';
-	}
+	}else if (player[3] != master[3]) {
+
+		if (player[3] == master[0]) {
+			ch1.style.backgroundColor = 'white';
+		if (player[3] == master[1]) {
+			ch2.style.backgroundColor = 'white';
+		if (player[3] == master[2]) {
+			ch3.style.backgroundColor = 'white';
+		}
+		}
+	}	
+}
 
 	if(player[0] == master[0] && player[1] == master[1] && player[2] == master[2] && player[3] == master[3]){
 		createwin();
