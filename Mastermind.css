@@ -35,6 +35,7 @@ nav {
 	font-size: 70px;
 	padding:10px;
 	position: absolute;
+	top:150px;
 	left: 425px;
 	background-color: aliceblue ;
 	border: black solid 2px;

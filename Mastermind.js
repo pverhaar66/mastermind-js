@@ -6,6 +6,7 @@ var row = 1;
 var wished = document.getElementById('wished').value;
 wished.value = 6;
 
+
 var infoscrn = document.getElementById('infoscreen')
 infoscrn.style.display = 'none';
 infoscrn.value = 0;
@@ -93,17 +94,17 @@ function generateCode(length, colours) {
 		master.push(hex[digit]);
 	}
 
-	console.log(master);
+	console.log(master);  
 
 	colour();
 }
 
 function colour() {
 	console.log("colour check")
-	ms1.style.backgroundColor = master[0];
-	ms2.style.backgroundColor = master[1];
-	ms3.style.backgroundColor = master[2];
-	ms4.style.backgroundColor = master[3];
+	ms1.style.backgroundImage = "url('img/qeustion.jpg')";
+	ms2.style.backgroundImage = "url('img/qeustion.jpg')";
+	ms3.style.backgroundImage = "url('img/qeustion.jpg')";
+	ms4.style.backgroundImage = "url('img/qeustion.jpg')";
 	
 	console.log("colouring done")
 }
@@ -215,13 +216,35 @@ if(player[0] == null){
 }
 
 	if(player[0] == master[0] && player[1] == master[1] && player[2] == master[2] && player[3] == master[3]){
-		createwin();
-		}
-	
+
+	ms1.style.backgroundImage = 'none';
+	ms1.style.backgroundColor = master[0];
+	ms2.style.backgroundImage = 'none';
+	ms2.style.backgroundColor = master[1];
+	ms3.style.backgroundImage = 'none';
+	ms3.style.backgroundColor = master[2];
+	ms4.style.backgroundImage = 'none';
+	ms4.style.backgroundColor = master[3];
+	createwin();
+}
+
+
+
 player[0] = null;
 player[1] = null;
 player[2] = null;
 player[3] = null;
 row = row+1;
 
+	if (row > 12) {
+		alert('Game Over');
+		ms1.style.backgroundImage = 'none';
+		ms1.style.backgroundColor = master[0];
+		ms2.style.backgroundImage = 'none';
+		ms2.style.backgroundColor = master[1];
+		ms3.style.backgroundImage = 'none';
+		ms3.style.backgroundColor = master[2];
+		ms4.style.backgroundImage = 'none';
+		ms4.style.backgroundColor = master[3];
+	}
 }
