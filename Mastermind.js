@@ -80,25 +80,16 @@ function reset(){
 }
 
 
-function generateCode(length, colours) {
-	var length = length || 4;
-	var colours = colours || 6;
-	if (length > 4) {
-		length = 4;
-	}else if (length < 4) {
-		length = 4
-	}
+function generateCode() {
 
-	for (var i=1; i<=length; i++) {
-		var digit = Math.floor((Math.random() * colours) + 1); 
+	for (var i=1; i<=4; i++) {
+		var digit = Math.floor((Math.random() *6 ) + 1); 
 		master.push(hex[digit]);
-	}
 
 	console.log(master);  
-
+	}
 	colour();
 }
-
 function colour() {
 	console.log("colour check")
 	ms1.style.backgroundImage = "url('img/qeustion.jpg')";
